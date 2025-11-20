@@ -3,60 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- ব্রাউজারের ট্যাবের নাম -->
-  <title>Md. Ikram Hossain </title>
-
-  <!-- মোবাইল / হোমস্ক্রিনের জন্য নাম -->
-  <meta name="application-name" content="Ikram Hridoy">
-  <meta name="apple-mobile-web-app-title" content="Ikram Hridoy">
-
-  <!-- Added Links -->
-  <link rel="icon" href="/logo192.png" />
-<link rel="apple-touch-icon" href="/logo192.png" />
-<link rel="manifest" href="/manifest.json" />
-  
+  <title>Md. Ikram Hossain - Portfolio</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" href="https://i.ibb.co.com/0j3Y3KkP/ikramhridoy-logo.jpg" type="image/jpeg">
   <style>
-    body{
-      margin:0;
-      font-family:Arial;
-      background:linear-gradient(135deg,#1e3c72,#2a5298);
-      color:white;
-      height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center
-    }
-    .box{
-      background:rgba(0,0,0,0.4);
-      padding:50px;
-      border-radius:20px;
-      box-shadow:0 15px 35px rgba(0,0,0,0.5);
-      max-width:90%
-    }
-    h1{font-size:3rem;margin:10px 0}
-    p{font-size:1.4rem}
-    .btn{
-      background:#fff;
-      color:#1e3c72;
-      padding:15px 40px;
-      border-radius:50px;
-      text-decoration:none;
-      font-weight:bold;
-      margin-top:20px;
-      display:inline-block
-    }
+    :root { --primary: #1e3c72; --accent: #2a5298; --text-color: #fff; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Segoe UI',Arial,sans-serif; background:linear-gradient(135deg,#0f2027,#203a43,#2c5364); color:#eee; line-height:1.6; }
+    header { height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; background:url('https://i.ibb.co.com/0j3Y3KkP/ikramhridoy-logo.jpg') center/cover no-repeat; position:relative; }
+    header::before { content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); }
+    .hero { position:relative; z-index:2; }
+    .hero img { width:180px; height:180px; border-radius:50%; border:5px solid var(--accent); margin-bottom:20px; }
+    h1 { font-size:3.5rem; margin:10px 0; }
+    .title { font-size:1.8rem; color:#00ffcc; }
+    section { padding:80px 10%; max-width:1200px; margin:auto; }
+    h2 { font-size:2.8rem; text-align:center; margin-bottom:50px; color:#00ffcc; }
+    .about, .contact { background:rgba(0,0,0,0.4); border-radius:20px; padding:40px; }
+    .skills { display:grid; grid-template-columns:repeat(auto-fit,minmax(100px,1fr)); gap:20px; text-align:center; }
+    .skill { background:var(--accent); padding:20px; border-radius:15px; font-weight:bold; font-size:1.2rem; }
+    .projects { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; }
+    .project-card { background:rgba(255,255,255,0.1); border-radius:15px; overflow:hidden; transition:0.3s; }
+    .project-card:hover { transform:translateY(-10px); box-shadow:0 20px 40px rgba(0,255,255,0.3); }
+    .project-card img { width:100%; height:200px; object-fit:cover; }
+    .card-body { padding:20px; }
+    .btn { background:#00ffcc; color:#000; padding:12px 30px; border:none; border-radius:50px; font-weight:bold; cursor:pointer; margin:10px; display:inline-block; text-decoration:none; }
+    footer { text-align:center; padding:30px; background:#000; }
+    @media (max-width:768px) { h1 { font-size:2.5rem; } .hero img { width:140px; height:140px; } }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Assalamu Alaikum</h1>
-    <h1>I'm Md. Ikram Hossain (Hridoy)</h1>
-    <p>This is my personal website</p>
-    <p>Contact me</p>
-    <a href="https://wa.me/8801911372121" class="btn">WhatsApp</a>
-    <a href="https://www.facebook.com/share/1W5DvX49aP/" class="btn" style="margin-left:10px;">Facebook</a>
-  </div>
+  <header>
+    <div class="hero">
+      <img src="https://i.ibb.co.com/0j3Y3KkP/ikramhridoy-logo.jpg" alt="Md. Ikram Hossain">
+      <h1>Md. Ikram Hossain</h1>
+      <p class="title">Web Developer | Freelancer | Student</p>
+      <div>
+        <a href="https://wa.me/88019xxxxxxxx" class="btn">WhatsApp</a>
+        <a href="https://fb.com/yourprofile" class="btn">Facebook</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p style="font-size:1.3rem;text-align:center;max-width:800px;margin:auto;">
+      আসসালামু আলাইকুম! আমি ইকরাম। ওয়েব ডেভেলপমেন্ট, গ্রাফিক্স আর ফ্রিল্যান্সিং নিয়ে কাজ করি। বর্তমানে HTML, CSS, JavaScript, React শিখছি আর প্রজেক্ট বানাচ্ছি।
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">GitHub</div>
+      <div class="skill">Figma</div>
+      <div class="skill">Photoshop</div>
+      <div class="skill">Video Editing</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x200?text=Project+1" alt="Project">
+        <div class="card-body">
+          <h3>Portfolio Website</h3>
+          <p>আমার প্রথম প্রফেশনাল পোর্টফোলিও</p>
+          <a href="#" class="btn">View Live</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x200?text=Coming+Soon" alt="Project">
+        <div class="card-body">
+          <h3>Project 2</h3>
+          <p>শীঘ্রই আসছে...</p>
+        </div>
+      </div>
+      <!-- আরও প্রজেক্ট যোগ করতে চাইলে এই কার্ড কপি কর -->
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p style="text-align:center;">যেকোনো কাজ বা কথা বলতে চাইলে যোগাযোগ করুন</p>
+    <div style="text-align:center;margin-top:30px;">
+      <a href="https://wa.me/88019xxxxxxxx" class="btn">WhatsApp</a>
+      <a href="mailto:yourmail@gmail.com" class="btn">Email</a>
+      <a href="https://fb.com/yourid" class="btn">Facebook</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Md. Ikram Hossain (Hridoy) | Made with ❤️ & Grok
+  </footer>
 </body>
 </html>
