@@ -1,0 +1,21 @@
+{
+  "name": "Md. Ikram Hossain",
+  "short_name": "Ikram Hridoy",
+  "description": "My Personal Portfolio Website",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e3c72",
+  "theme_color": "#1e3c72",
+  "icons": [
+    {
+      "src": "https://i.ibb.co.com/0j3Y3KkP/ikramhridoy-logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https://i.ibb.co.com/0j3Y3KkP/ikramhridoy-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
