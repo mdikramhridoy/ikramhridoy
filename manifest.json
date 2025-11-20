@@ -1,21 +1,20 @@
 {
-  "name": "Md. Ikram Hossain",
-  "short_name": "Ikram Hridoy",
-  "description": "My Personal Portfolio Website",
+  "name": "Ikram Hridoy Portfolio",
+  "short_name": "Portfolio",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1e3c72",
-  "theme_color": "#1e3c72",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "https://i.ibb.co.com/0j3Y3KkP/ikramhridoy-logo.jpg",
+      "src": "/logo192.png",
       "sizes": "192x192",
-      "type": "image/jpeg"
+      "type": "image/png"
     },
     {
-      "src": "https://i.ibb.co.com/0j3Y3KkP/ikramhridoy-logo.jpg",
+      "src": "/logo512.png",
       "sizes": "512x512",
-      "type": "image/jpeg"
+      "type": "image/png"
     }
   ]
 }
