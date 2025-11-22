@@ -1,18 +1,22 @@
+// Theme Toggle
 const toggle = document.getElementById('theme-toggle');
 const body = document.body;
-
-// Check local storage
-if(localStorage.getItem('theme') === 'dark'){
-    body.classList.add('dark');
-    toggle.checked = true;
-}
-
+if(localStorage.getItem('theme') === 'dark'){ body.classList.add('dark'); toggle.checked=true; }
 toggle.addEventListener('change', () => {
-    if(toggle.checked){
-        body.classList.add('dark');
-        localStorage.setItem('theme','dark');
-    } else {
-        body.classList.remove('dark');
-        localStorage.setItem('theme','light');
-    }
+  if(toggle.checked){ body.classList.add('dark'); localStorage.setItem('theme','dark'); }
+  else{ body.classList.remove('dark'); localStorage.setItem('theme','light'); }
 });
+
+// Typing Effect for slogan
+const phrases = ["Dreamer","Learner","Ambitious","Passionate","Dedicated"];
+let i=0,j=0,current='',isDeleting=false;
+const slogan = document.getElementById('slogan');
+function type() {
+  if(!isDeleting && j<phrases[i].length){ current+=phrases[i][j++]; }
+  else if(isDeleting && j>0){ current=current.slice(0,-1); j--; }
+  slogan.textContent = current;
+  if(j===phrases[i].length){ isDeleting=true; setTimeout(type,1000); return; }
+  if(isDeleting && j===0){ isDeleting=false; i=(i+1)%phrases.length; }
+  setTimeout(type,150);
+}
+type();
