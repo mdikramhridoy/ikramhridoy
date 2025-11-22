@@ -20,3 +20,12 @@ function type() {
   setTimeout(type,150);
 }
 type();
+
+// Messenger button spinner
+const messengerBtn = document.getElementById('messenger-btn');
+const loader = document.getElementById('loader');
+messengerBtn.addEventListener('click', () => {
+  loader.style.display = 'inline';
+  window.open('https://m.me/md.ikram.hridoy.2024','_blank');
+  setTimeout(() => { loader.style.display = 'none'; }, 2000);
+});
