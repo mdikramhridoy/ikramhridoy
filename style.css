@@ -62,6 +62,8 @@ body.dark .about-card { background: rgba(50,50,50,0.3); }
 #contact h2 { font-size:2rem; margin-bottom:20px; }
 #contact a { color: var(--accent-color); text-decoration:none; font-weight:bold; transition:0.3s; }
 #contact a:hover { color:#ffb400; transform:scale(1.1); }
+#messenger-btn { padding:8px 15px; border:none; border-radius:8px; background:var(--accent-color); color:#fff; cursor:pointer; transition:0.3s; }
+#messenger-btn:hover { background:#ff9900; transform:scale(1.05); }
 
 /* Responsive */
 @media (max-width:768px){ #hero h1{font-size:3rem;} #hero p{font-size:1.2rem;} }
